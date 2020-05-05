@@ -1,0 +1,193 @@
+/* shop cart responsive */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .shop-cart {
+        padding: 60px 0;
+    }
+    .shop-cart .notification-cart p {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 30px;
+    }
+    .shop-cart .notification-cart p br {
+        display: none;
+    }
+    .shop-cart .cart-list-table .table {
+        width: 1100px;
+    }
+    .shop-cart .cart-list-table .table tbody tr.single-item th .carted-single-item .part-img {
+        width: 55px;
+    }
+    .shop-cart .cart-list-table .table tbody th, .shop-cart .cart-list-table .table tbody td {
+        height: 100px;
+    }
+    .shop-cart .cart-list-table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .shop-cart {
+        padding: 60px 0;
+    }
+    .shop-cart .notification-cart p {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+    }
+    .shop-cart .notification-cart p br {
+        display: none;
+    }
+    .shop-cart .successfully-notice {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .shop-cart .successfully-notice p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .shop-cart .cart-list-table .table {
+        width: 1100px;
+    }
+    .shop-cart .cart-list-table .table tbody tr.single-item th .carted-single-item .part-img {
+        width: 55px;
+    }
+    .shop-cart .cart-list-table .table tbody th, .shop-cart .cart-list-table .table tbody td {
+        height: 100px;
+    }
+    .shop-cart .cart-list-table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .shop-cart .buttons-for-update-cart form .aply-button {
+        position: initial;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .buttons-for-update-cart .aply-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .shop-cart-footer .cart-total {
+        margin-top: 50px;
+    }
+    .shop-cart .buttons-for-update-cart form input {
+        padding-right: 30px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+    .shop-cart {
+        padding: 60px 0;
+    }
+    .shop-cart .notification-cart p {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+    }
+    .shop-cart .notification-cart p br {
+        display: none;
+    }
+    .shop-cart .successfully-notice {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .shop-cart .successfully-notice p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .shop-cart .cart-list-table .table {
+        width: 1100px;
+    }
+    .shop-cart .cart-list-table .table tbody tr.single-item th .carted-single-item .part-img {
+        width: 55px;
+    }
+    .shop-cart .cart-list-table .table tbody th, .shop-cart .cart-list-table .table tbody td {
+        height: 100px;
+    }
+    .shop-cart .cart-list-table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .shop-cart .buttons-for-update-cart form .aply-button {
+        position: initial;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .buttons-for-update-cart .aply-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .shop-cart-footer .cart-total {
+        margin-top: 50px;
+    }
+    .shop-cart .buttons-for-update-cart form input {
+        padding-right: 30px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .shop-cart {
+        padding: 60px 0;
+    }
+    .shop-cart .notification-cart p {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+    }
+    .shop-cart .notification-cart p br {
+        display: none;
+    }
+    .shop-cart .successfully-notice {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .shop-cart .successfully-notice p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .shop-cart .cart-list-table .table {
+        width: 1100px;
+    }
+    .shop-cart .cart-list-table .table tbody tr.single-item th .carted-single-item .part-img {
+        width: 55px;
+    }
+    .shop-cart .cart-list-table .table tbody th, .shop-cart .cart-list-table .table tbody td {
+        height: 100px;
+    }
+    .shop-cart .cart-list-table {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .shop-cart .buttons-for-update-cart form .aply-button {
+        position: initial;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .buttons-for-update-cart .aply-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .shop-cart .shop-cart-footer .cart-total {
+        margin-top: 50px;
+    }
+
+    .cart-iz-empty .cart-empty-content {
+        padding: 30px;
+    }
+    .cart-iz-empty .cart-empty-content h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .cart-iz-empty .cart-empty-content img {
+        width: 130px;
+        margin-bottom: 24px;
+    }
+    .cart-iz-empty .cart-empty-content p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .shop-cart .buttons-for-update-cart form input {
+        padding-right: 30px;
+    }
+}

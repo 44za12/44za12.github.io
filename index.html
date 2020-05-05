@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Helping Dude - Safety measures for a wiser man</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- fontawesome icon  -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!-- flaticon css -->
+        <link rel="stylesheet" href="assets/fonts/flaticon.css">
+        <!-- animate.css -->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!-- vector map css -->
+        <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.3.css">
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- responsive -->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <style type="text/css">
+        .owl-stage{
+            left:-50
+        }
+
+    </style>
+    <body>
+
+        <!-- back to top button begin -->
+        <div class="back-to-top-button">
+            <button>
+                <i class="fas fa-level-up-alt"></i>
+            </button>
+        </div> 
+        <!-- back to top button end -->
+        
+        <!-- Modal -->
+        <div class="modal modal-registration fade" id="registerationModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               
+            <div class="modal-content">
+                <ul class="nav nav-tabs" id="myTab-modal" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="signIn-Tab" data-toggle="tab" href="index.html#signIn" role="tab" aria-controls="signIn" aria-selected="true">SignIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="signUp-Tab" data-toggle="tab" href="index.html#signUp" role="tab" aria-controls="signUp" aria-selected="false">SignUp</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTab-modalContent">
+                <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signIn-Tab">
+                    <img src="assets/img/logo-2.png" alt="">
+                    <h3 class="title">Login</h3>
+                    <form>
+                        <input type="text" placeholder="User name">
+                        <input type="password" placeholder="Password">
+                        <a href="index.html#" class="create-account-btn">Create My Account</a>
+                        <span class="text">or</span>
+                        <a href="index.html#" class="facebook-btn">Log in Via Facebook</a>
+                    </form>
+                    <p>Already have an account?<a href="index.html#">LOGIN</a></p>
+                </div>
+                <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUp-Tab">
+                    <img src="assets/img/logo-2.png" alt="">
+                    <h3 class="title">Create Your Account</h3>
+                    <form>
+                        <input type="text" placeholder="User name">
+                        <input type="email" placeholder="Enter your mail address">
+                        <input type="password" placeholder="Password">
+                        <input checked type="checkbox" id="test1" />
+                        <label for="test1">I'd like to hear about promos, new products,
+                            and much more! </label>
+                        <input type="checkbox" id="test2" />
+                        <label for="test2">By clicking "Sign up" you agree to our Terms of Service and Privacy Policy</label>
+                        <a href="index.html#" class="create-account-btn">Create My Account</a>
+                        <span class="text">or</span>
+                        <a href="index.html#" class="facebook-btn">Log in Via Facebook</a>
+                    </form>
+                    <p>Already have an account?<a href="index.html#">LOGIN</a></p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- header begin -->
+        <div class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 d-xl-flex d-lg-flex d-block align-items-center">
+                            <div class="part-left">
+                                <ul>
+                                    <li>
+                                        <a href="tel:9087654321">
+                                            <span class="part-icon">
+                                                <i class="fas fa-headset"></i>
+                                            </span>
+                                            <span class="text">
+                                                Support
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:support@helpingdude.com">
+                                            <span class="part-icon">
+                                                <i class="far fa-envelope"></i>
+                                            </span>
+                                            <span class="text">
+                                                support@helpingdude.com 
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="part-right">
+                                <ul>
+                                    <li>
+                                        <a href="shop-cart.html">
+                                            <span class="part-icon">
+                                                <i class="fas fa-cart-arrow-down"></i>
+                                            </span>
+                                            <span class="text">
+                                                ₹0.00
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="part-icon user">
+                                            <i class="far fa-user"></i>
+                                        </span>
+                                        <a href="index.html#" class="c-acc" data-toggle="modal" data-target="#registerationModal">Sign in | Join</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header-bottom">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-2 d-xl-flex d-lg-flex align-items-center">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block d-flex align-items-center">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="assets/img/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-xl-none d-lg-none d-block">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-10">
+                            <div class="main-menu">
+                                <nav class="navbar navbar-expand-lg">
+                                  
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="infections.html">
+                                                    Infections
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="about.html">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="contact.html">Contact</a>
+                                            </li>
+                                            <li class="nav-item buy-nows">
+                                                <a class="nav-link buy-now" href="index.html#">Buy Now</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header end -->
+
+        <!-- banner begin -->
+        <div class="banner banner-3">
+<!--             <img class="banner-animation animation-1" src="assets/img/drone-1.png" alt="">
+            <img class="banner-animation animation-2" src="assets/img/drone-2.png" alt=""> -->
+            <img class="banner-animation animation-3" src="assets/img/man-2.png" alt="">
+            <div class="container">
+                <div class="row justify-content-xl-start justify-content-lg-center justify-content-start">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="banner-content">
+                            <h1 class="text-center" style="background-color: white"><span style="color: orange">INDIA</span><span style="color: green"> FIGHTS <span style="color: red"> COVID19</h1>
+                                <br>
+                            <h1>Become<br> 
+                                a COVID19<br>
+                                Fighter by Saving<br>
+                                Yourself, Your<br>
+                                Family and the<br>
+                                Nation<br></h1>
+                            <p>Welcome to the home of Helping Dude, we are determined to make your salon experience safer and<br> hygienic in these tough times. Shop now!</p>
+                            <div class="banner-buttons">
+                                <a class="banner-button" href="index.html#">buy now</a>
+                                <a href="https://www.youtube.com/watch?v=e8eSfqaaGXQ&list=RDe8eSfqaaGXQ&start_radio=1" class="mfp-iframe">
+                                    <span class="icon banner-button">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                    <span class="text">why is it important?</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner end -->
+
+        <!-- feature begin -->
+        <div class="feature">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-md-4">
+                        <div class="single-feature">
+                            <div class="icon-box">
+                                <div class="part-icon">
+                                    <img src="assets/img/svg/feature-icon-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="part-text">
+                                <span class="title">Free Shipping</span>
+                                <p>Easy and fast delivery across India.
+                                    Free shipping options available on Checkout page.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-md-4">
+                        <div class="single-feature">
+                            <div class="icon-box">
+                                <div class="part-icon">
+                                    <img src="assets/img/svg/feature-icon-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="part-text">
+                                <span class="title">Easy Returns</span>
+                                <p>Easy returns with a seamless experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-md-4">
+                        <div class="single-feature">
+                            <div class="icon-box">
+                                <div class="part-icon">
+                                    <img src="assets/img/svg/feature-icon-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="part-text">
+                                <span class="title">24/7 Support</span>
+                                <p>Fast and thorough support, 
+                                    available to all customers 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feature end -->
+
+        <!-- amazing feature begin -->
+
+        <!-- easy to use begin -->
+        <div class="easy-to-begin">
+            <div class="container">
+                <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-center">
+                    <div class="col-xl-4 col-lg-4 d-xl-flex d-lg-flex d-block justify-content-end align-items-end">
+                        <div class="part-img">
+                            <img src="assets/img/svg/easy-to-use-img-3.png" alt="">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-10">
+                        <div class="part-text">
+                            <span class="subtitle">Intuitive, Innovative</span>
+                            <h3>Easy to Use</h3>
+                            <p>Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph. Need content for this paragraph.</p>
+                            <a href="https://www.youtube.com/watch?v=e8eSfqaaGXQ&list=RDe8eSfqaaGXQ&start_radio=1" class="mfp-iframe play">
+                                <span class="icon">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                                <span class="text">
+                                    Play video
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- easy to use end -->
+
+        <!-- product begin -->
+        <div class="product">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12 col-lg-12 col-sm-12 col-md-8">
+                        <div class="section-title">
+                            <span class="subtitle">Recommended for salon visits!</span>
+                            <h2>Personal Precaution Equipment Kit</h2>
+                            <p>With new trends constantly coming up, we've decided to freshen up this list with 
+                                the safest products to sell.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <!-- product 1st set -->
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-sm-6">
+                                <div class="single-product">
+                                    <div class="part-img">
+                                        <img src="https://via.placeholder.com/263x253/000000/FFFFFF.png?text=Product%20Image1" alt="">
+                                        <span class="todas-tag">
+                                            new
+                                        </span>
+                                    </div>
+                                    <div class="part-text">
+                                        <a href="product-details.html#">
+                                            <span class="product-name">Basic Kit</span>
+                                        </a>
+                                        <span class="product-price">₹ 1500.00</span>
+                                        <a href="index.html#" class="buy-now-button">
+                                            <i class="fas fa-shopping-cart"></i> buy now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-sm-6">
+                                <div class="single-product">
+                                    <div class="part-img">
+                                        <img src="https://via.placeholder.com/263x253/000000/FFFFFF.png?text=Product%20Image2" alt="">
+                                        <span class="todas-tag">
+                                            hot
+                                        </span>
+                                    </div>
+                                    <div class="part-text">
+                                        <a href="product-details.html">
+                                            <span class="product-name">Standard Kit</span>
+                                        </a>
+                                        <span class="product-price">₹ 2000.00</span>
+                                        <a href="index.html#" class="buy-now-button">
+                                            <i class="fas fa-shopping-cart"></i> buy now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-sm-6">
+                                <div class="single-product">
+                                    <div class="part-img">
+                                        <img src="https://via.placeholder.com/263x253/000000/FFFFFF.png?text=Product%20Image3" alt="">
+                                    </div>
+                                    <div class="part-text">
+                                        <a href="product-details.html">
+                                            <span class="product-name">Premium Kit</span>
+                                        </a>
+                                        <span class="product-price">₹ 2500.00</span>
+                                        <a href="index.html#" class="buy-now-button">
+                                            <i class="fas fa-shopping-cart"></i> buy now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product end -->
+
+        <!-- testimonial begin -->
+        <div class="testimonial">
+            <img src="assets/img/testimonial-bg.png" alt="" class="shape">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-sm-10">
+                        <div class="section-title section-title-2">
+                            <span class="subtitle">Testimonials</span>
+                            <h2>What People Are Saying</h2>
+                            <p> Some Impresions from our customers! Please read some of the lovely things our<br/> 
+                                customers say about us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-8">
+                        <div class="testimonial-slider owl-carousel owl-theme">
+                            <div class="single-testimonial">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                                </div>
+                                <div class="part-text">
+                                    <span class="name">Rahber </span>
+                                    <span class="profession">Entrepreneur</span>
+                                    <p>"Now I don't have much fear about any virus becuase I have taken the measures to prevent COVID19"</p>
+                                </div>
+                            </div>
+                            <div class="single-testimonial">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                                </div>
+                                <div class="part-text">
+                                    <span class="name">Aazar </span>
+                                    <span class="profession">Ninja</span>
+                                    <p>"Now I don't have much fear about any virus becuase I have taken the measures to prevent COVID19"</p>
+                                </div>
+                            </div>
+                            <div class="single-testimonial">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                                </div>
+                                <div class="part-text">
+                                    <span class="name">Aazar </span>
+                                    <span class="profession">Ninja</span>
+                                    <p>"Now I don't have much fear about any virus becuase I have taken the measures to prevent COVID19"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- testimonial end -->
+
+        <!-- faq begin -->
+        <div class="faq">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="section-title">
+                            <span class="subtitle">All Answers In One PLace</span>
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Get answers to our most commonly asked questions about Todas.You can find the 
+                                answers for the most common questions asked by our customers.
+                                Please check this guide before contacting us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent2">
+                    <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-8 col-md-9">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        How can I cancel my order?
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                        
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using this product.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Can I order more than one product?
+                                                </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using this product.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Can I cancel my order if I change my mind?
+                                                </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using this product.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>        
+        <!-- footer begin -->
+        <div class="footer">
+            <div class="container">
+                <div class="news-letter">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-6 col-sm-10">
+                            <div class="section-title section-title-2">
+                                <h2>Subcriber For Newsletter</h2>
+                                <p> Be the first to know about sales & offers, new arrivals, latest trends, <br/>
+                                    events, brand news, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-6">
+                            <form>
+                                <input type="email" placeholder="Enter your email address">
+                                <button>Subcribe Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 d-xl-flex d-lg-flex d-block align-items-center">
+                            <p class="copyright-text">Copyright © 2020. All Rights Reserved By <a href="index.html#">Helping Dude</a></p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="partners">
+                                <ul>
+                                    <li>
+                                        <a href="index.html#">
+                                            <img src="assets/img/partner-1.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                            <img src="assets/img/partner-2.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                            <img src="assets/img/partner-3.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                            <img src="assets/img/partner-4.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                            <img src="assets/img/partner-5.jpg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer end -->
+        
+        <!-- jquery -->
+        <script src="assets/js/jquery.js"></script>
+        <!-- bootstrap -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- owl carousel -->
+        <script src="assets/js/owl.carousel.js"></script>
+        <!-- magnific popup -->
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <!-- filterizr js -->
+        <script src="assets/js/jquery.filterizr.min.js"></script>
+        <!-- way poin js-->
+        <script src="assets/js/waypoints.min.js"></script>
+        <!-- counter up js -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- vector map js -->
+        <script src="assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+        <script src="assets/js/jquery-jvectormap-world-mill.js"></script>
+        <script src="assets/js/gdp-data.js"></script>
+        <script src="assets/js/vector-map-activated.js"></script>
+        <!-- wow js-->
+        <script src="assets/js/wow.min.js"></script>
+        <!-- animation when scrolling -->
+        <script src="assets/js/scroll-animation-amazing-feature.js"></script>
+        <script src="assets/js/scroll-animation-industry-feature.js"></script>
+        <!-- main -->
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            $('.owl-carousel').owlCarousel({
+                margin: 10,
+                loop: true,
+                items: 1,
+                nav:true,
+                navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                stagePadding: 70
+            });
+        </script>
+    </body>
+</html>
