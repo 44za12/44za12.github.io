@@ -14,6 +14,53 @@
     typography
 ===========================================*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 .container {
   max-width: 1200px; }
 
@@ -655,8 +702,8 @@ ul {
         -webkit-animation: circle2 8s linear infinite;
         animation: circle2 8s linear infinite; }
   .banner .banner-content {
-    padding: 200px 0;
-    margin-top: 139px; }
+    padding: 100px 0;
+    margin-top: 90px; }
     .banner .banner-content h1 {
       color: #fff;
       font-size: 80px;
@@ -1255,7 +1302,7 @@ ul {
           font-size: 12px; }
 
 .product {
-  padding: 120px 0 90px; }
+  padding: 30px 0 30px; }
   .product.product-page {
     padding-bottom: 120px; }
   .product .product-filtering-button {
@@ -2276,17 +2323,18 @@ ul {
       transition: background-size .5s, background-position .3s ease-in .5s;
       font-weight: bold;
   }
-  .highlighted2 {
-      -webkit-animation-name: color2;
-      -webkit-animation-duration: 5s;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-delay: 0s;
+  .highlighted:hover {
+      -webkit-animation-name: none;
+      font-size: 20px;
       background-image: linear-gradient(#fff, #fff);
       background-repeat: no-repeat;
       background-position: 0% 100%;
       background-size: 100% 2px;
       transition: background-size .5s, background-position .3s ease-in .5s;
+      font-weight: bold;
+  }
+  .highlighted2 {
+      background-color: white;
   }
   @-webkit-keyframes color2 {
       0% {
@@ -2397,7 +2445,7 @@ ul {
       line-height: 26px; }
 
 .faq {
-  padding: 120px 0; }
+  padding: 30px 0; }
   .faq.faq-page {
     background: url("../img/faq-bg.jpg") center center no-repeat;
     background-size: cover; }
