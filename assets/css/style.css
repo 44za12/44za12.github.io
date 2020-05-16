@@ -30,7 +30,7 @@
         font-weight: 600;
         color: #fff;
         border-radius: 50px;
-        font-size: 20px;
+        font-size: 25px !important;
         -webkit-transition: all 0.3s ease-in;
         -moz-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
