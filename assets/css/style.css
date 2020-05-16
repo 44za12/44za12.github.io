@@ -16,7 +16,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 .buy-now-button {
         height: 35px;
-        width: 155px;
+        width: 120px;
         /*background: #3f86fe;*/
         /*background-image: -moz-linear-gradient(85deg, #2d7bff 0%, #4c8eff 100%);*/
         /*background-image: -webkit-linear-gradient(85deg, #2d7bff 0%, #4c8eff 100%);*/
@@ -30,13 +30,13 @@
         font-weight: 600;
         color: #fff;
         border-radius: 50px;
-        font-size: 25px !important;
+        font-size: 15px !important;
         -webkit-transition: all 0.3s ease-in;
         -moz-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
         transition: all 0.3s ease-in; }
 .panel-default>.panel-heading {
-  color: #333;
+  color: #000;
   background-color: #fff;
   border-color: #e4e5e7;
   padding: 0;
@@ -49,6 +49,8 @@
 .panel-default>.panel-heading a {
   display: block;
   padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .panel-default>.panel-heading a:after {
