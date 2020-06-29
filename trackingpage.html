@@ -27,7 +27,122 @@
         <!-- responsive -->
         <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
+    <style type="text/css">
 
+.card {
+    z-index: 0;
+    background-color: #ECEFF1;
+    padding-bottom: 20px;
+    border-radius: 10px
+}
+
+.top {
+    padding-top: 40px;
+    padding-left: 13% !important;
+    padding-right: 13% !important
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #455A64;
+    padding-left: 0px;
+    margin-top: 30px
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar .step0:before {
+    font-family: FontAwesome;
+    content: "X";
+    color: #fff
+}
+
+#progressbar li:before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #C5CAE9;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 12px;
+    background: #C5CAE9;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    z-index: -1
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: -50%
+}
+
+#progressbar li:nth-child(2):after,
+#progressbar li:nth-child(3):after {
+    left: -50%
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    left: 50%
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #651FFF
+}
+
+#progressbar li.active:before {
+    font-family: FontAwesome;
+    content: "\2713";
+}
+
+.icon {
+    width: 250px;
+    height: 250px;
+}
+
+.icon-content {
+    padding-bottom: 20px
+}
+
+@media screen and (max-width: 992px) {
+    .icon-content {
+        width: 50%;
+        height: 50%;
+    }
+}
+    </style>
     <body>
 
         <!-- back to top button begin -->
@@ -169,18 +284,20 @@
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="infections.html">
-                                                    Infections
+                                                <a class="nav-link" href="products.html">
+                                                    Products | Buy Now
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="about.html">About</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="contact.html">Contact</a>
+                                                <a class="nav-link" href="newsroom.html">
+                                                    Newsroom
+                                                </a>
                                             </li>
-                                            <li class="nav-item buy-nows">
-                                                <a class="nav-link buy-now" href="index.html#">Buy Now</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="contact.html">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -194,19 +311,15 @@
         <!-- header end -->
 
         <!-- breadcrumb begin -->
-        <div class="breadcrumb-todas">
+        <div class="breadcrumb-todas breadcrumb-about">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8">
                         <div class="breadcrumb-content">
-                            <h2 class="title">Error</h2>
+                            <h2 class="title">Order List</h2>
                             <ul>
-                                <li>
-                                    <a href="error.html#">
-                                        Home
-                                    </a>
-                                </li>
-                                <li id="current-page">Error</li>
+                                <li><a href="/">Home</a></li>
+                                <li id="current-page">Order List</li>
                             </ul>
                         </div>
                     </div>
@@ -215,24 +328,67 @@
         </div>
         <!-- breadcrumb end -->
 
-        <!-- error begin -->
-        <div class="error">
+        <!-- why us begin -->
+        <div class="product">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="error-content">
-                            <img src="assets/img/error.png" alt="image">
-                            <div class="part-txt">
-                                <h3>Oops... It looks  like you 're lost !</h3>
-                                <p>The page you were looking for dosen't exist.</p>
-                                <a href="error.html#">GO BACK</a>
+                <div class="row justify-content-center">
+                    <div class="col-xl-12 col-lg-12 col-sm-12 col-md-8">
+                        <div class="section-title">
+                            <strong><h3>Track Your Orders!</h3></strong>
+                            <br>
+                            <h2>All Your Orders</h2>
+                            <!-- <p>With new trends constantly coming up, we've decided to freshen up this list with 
+                                the safest products to sell.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="row d-flex justify-content-between px-3 top">
+                            <div class="d-flex">
+                                <h5>ORDER <span class="text-primary font-weight-bold">#OrderNumber</span></h5>
                             </div>
+                            <div class="d-flex flex-column text-sm-right">
+                                <p class="mb-0">Expected Arrival: <span class="text-primary font-weight-bold">01/12/19</span></p>
+                            </div>
+                        </div> <!-- Add class 'active' to progress -->
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12">
+                                <ul id="progressbar" class="text-center">
+                                    <li class="active step0"></li>
+                                    <li class="active step0"></li>
+                                    <li class="active step0"></li>
+                                    <li class="step0"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center top">
+                            <!-- <div class="icon-content"> <img class="icon" src="https://i.imgur.com/9nnc9Et.png">
+                                <div class="text-center">
+                                    <p class="font-weight-bold">Order<br>Processed</p>
+                                </div>
+                            </div>
+                            <div class="icon-content"> <img class="icon" src="https://i.imgur.com/u1AzR7w.png">
+                                <div class="text-center">
+                                    <p class="font-weight-bold">Order<br>Shipped</p>
+                                </div>
+                            </div> -->
+                            <div class="icon-content"> <img class="icon" src="https://i.imgur.com/TkPm63y.png">
+                                <div class="text-center">
+                                    <p class="font-weight-bold">Order<br>En Route</p>
+                                </div>
+                            </div>
+                            <!-- <div class="icon-content"> <img class="icon" src="https://i.imgur.com/HdsziHP.png">
+                                <div class="text-center">
+                                    <p class="font-weight-bold">Order<br>Arrived</p>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- error end -->
+
 
         <!-- footer begin -->
         <div class="footer">
@@ -256,7 +412,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="foot-bottom">
                 <div class="container">
                     <div class="row">
@@ -315,6 +470,10 @@
         <!-- counter up js -->
         <script src="assets/js/jquery.counterup.min.js"></script>
         <!-- vector map js -->
+        <script src="assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+        <script src="assets/js/jquery-jvectormap-world-mill.js"></script>
+        <script src="assets/js/gdp-data.js"></script>
+        <script src="assets/js/vector-map-activated.js"></script>
         <!-- wow js-->
         <script src="assets/js/wow.min.js"></script>
         <!-- jquery ui slider -->
@@ -323,5 +482,38 @@
         <script src="assets/js/scroll-animation-industry-feature.js"></script>
         <!-- main -->
         <script src="assets/js/main.js"></script>
+      <script type="text/javascript">
+        var list = Array.from(new Array(88), (x,i) => i);
+        list.forEach(i => {
+        var card = document.createElement("div");
+        card.setAttribute('class','col-xl-3 col-lg-3 col-sm-6');
+        var productdiv = document.createElement("div");
+        productdiv.setAttribute("class","single-product");
+        var imagediv = document.createElement("div");
+        imagediv.setAttribute('class','part-img');
+        var image = document.createElement('img');
+        image.setAttribute("src",`https://via.placeholder.com/263x253/000000/FFFFFF.png?text=Product%20Image%20${i}`);
+        image.setAttribute("class","card-img-top");
+        var div = document.createElement("div");
+        div.setAttribute("class","part-text");
+        var name = document.createElement("span");
+        name.setAttribute("class","product-name");
+        name.textContent = `Product ${i}`;
+        var link = document.createElement("a");
+        link.setAttribute('href','product-details.html');
+        link.setAttribute('class','buy-now-button');
+        var icon = document.createElement("i");
+        icon.setAttribute('class','fas fa-eye');
+        card.appendChild(productdiv);
+        productdiv.appendChild(imagediv);
+        imagediv.appendChild(image);
+        productdiv.appendChild(div);
+        div.appendChild(name);
+        div.appendChild(link);
+        link.appendChild(icon);
+        link.textContent = 'Check Now';
+        document.getElementById('products').appendChild(card);
+        });
+      </script>
     </body>
 </html>
