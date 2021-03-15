@@ -70,7 +70,7 @@
 	<script>
 		function check() {
 			var string = $("#string").val();
-			var ret = string.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '\\\\$&');
+			var ret = string.replace(/[|\\{}()[\]^$+*?.]/g, '\\\\$&');
 			console.log(ret);
 			$("#regex").val(ret);
 			$("#regex").focus();
