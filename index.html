@@ -1,81 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Regex Converter</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/css/util.css">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-<!--===============================================================================================-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encrypt/Decrypt App</title>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
-	<div class="bg-contact2" style="background-image: url('static/images/bg-01.jpg');">
-		<div class="container-contact2">
-			<div class="wrap-contact2">
-				<form class="contact2-form validate-form" id="mainForm" onsubmit="check(); return false">
-					<span class="contact2-form-title">
-						Normal String to Regex Converter
-					</span>
+	<div class="min-h-screen bg-gray-100 flex flex-col justify-center">
+		<div class="relative py-3" style="max-width: 768px; width: 100%; margin: auto;">
+			<h1 class="text-3xl font-bold text-center mb-6">Deniable Encryption POC</h1>
+			<p class="text-md text-gray-600 mb-4">
+				Our Deniable Encryption system lets you secure your sensitive data with a unique dual-layer protection
+				approach. It
+				provides two encryption keys: one for a decoy message and another for the real sensitive information.
+				This way, if
+				pressured, you can reveal the decoy password, keeping the actual data safe and maintaining plausible
+				deniability.
+			</p>
+			<div class="relative p-8 bg-white shadow-sm sm:rounded-xl">
 
-					<div class="wrap-input2 validate-input" data-validate="This Field Is Required">
-						<input class="input2" type="text" name="normal-string" id="string">
-						<span class="focus-input2" data-placeholder="Enter the Normal String Here!"></span>
-					</div>
-
-					<div class="wrap-input2 validate-input">
-						<input class="input2" type="text" name="regex-string" readonly="readonly" id="regex">
-						<span class="focus-input2" data-placeholder="Regex String Would Appear Here!"></span>
-					</div>
-
-					<div class="container-contact2-form-btn">
-						<div class="wrap-contact2-form-btn">
-							<div class="contact2-form-bgbtn"></div>
-							<button class="contact2-form-btn">
-								Convert to Regex!
-							</button>
+				<div id="tabs" class="mb-4">
+					<button class="tab px-4 py-2 rounded bg-blue-500 text-white"
+						onclick="changeTab('decrypt')">Decrypt</button>
+					<button class="tab active-tab mr-2 px-4 py-2 rounded bg-blue-500 text-white"
+						onclick="changeTab('encrypt')">Encrypt</button>
+				</div>
+				<div id="decrypt" class="tab-content">
+					<form id="decryptForm" class="space-y-6">
+						<div>
+							<label for="cipher" class="text-sm font-medium text-gray-700">Cipher</label>
+							<input type="text" id="cipher" name="cipher"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
 						</div>
+						<div>
+							<label for="password" class="text-sm font-medium text-gray-700">Password</label>
+							<input type="password" id="password" name="password"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+						</div>
+						<button type="button" onclick="performDecryption()"
+							class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							Decrypt
+						</button>
+					</form>
+					<div id="decryptionResult"
+						class="mt-4 p-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg break-words">
+						<!-- Added break-words for text wrapping -->
 					</div>
-				</form>
+				</div>
+				<div id="encrypt" class="tab-content hidden">
+					<form id="encryptForm" class="space-y-6">
+						<div>
+							<label for="originalPass" class="text-sm font-medium text-gray-700">Original
+								Password</label>
+							<input id="originalPass" name="originalPass" type="password"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+						</div>
+						<div>
+							<label for="originalMessage" class="text-sm font-medium text-gray-700">Original
+								Message</label>
+							<input type="text" id="originalMessage" name="originalMessage"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+						</div>
+						<div>
+							<label for="fakePass" class="text-sm font-medium text-gray-700">Decoy Password</label>
+							<input id="fakePass" name="fakePass" type="password"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+						</div>
+						<div>
+							<label for="fakeMessage" class="text-sm font-medium text-gray-700">Decoy Message</label>
+							<input type="text" id="fakeMessage" name="fakeMessage"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+						</div>
+						<button type="button" onclick="performEncryption()"
+							class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							Encrypt
+						</button>
+					</form>
+					<div id="encryptionResult"
+						class="mt-4 p-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg break-words">
+						<!-- Added break-words for text wrapping -->
+					</div>
+				</div>
+
 			</div>
 		</div>
+		<footer class="bg-gray-200 mt-auto py-4 text-center">
+			<div class="text-gray-700 text-sm">
+				©
+				<script>
+					document.write(new Date().getFullYear())
+				</script> made with 🖤 by
+				<a href="https://www.linkedin.com/in/iAazar" target="_blank" class="underline text-blue-500">Aazar</a>
+				for a better web.
+			</div>
+		</footer>
 	</div>
 
 
 
-
-<!--===============================================================================================-->
-	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/vendor/bootstrap/js/popper.js"></script>
-	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/js/main.js"></script>
-
+	<script>
+		const MAX_USER_ITEMS = 6; const AES_KEY_SIZE = 256; const AES_NONCE_SIZE = 12; const TAG_SIZE = 16; const SALT_SIZE = 16; async function encrypt(items) { if (Object.keys(items).length > MAX_USER_ITEMS) { throw new Error("Too many items") } const salt = window.crypto.getRandomValues(new Uint8Array(SALT_SIZE)); let buffer = new Uint8Array([].concat(Array.from(salt))); console.log("Encrypting, initial buffer:", buffer); let offset = SALT_SIZE; for (let [password, message] of Object.entries(items)) { const keyMaterial = await getPasswordKey(password); const key = await deriveKey(keyMaterial, salt); const nonce = window.crypto.getRandomValues(new Uint8Array(AES_NONCE_SIZE)); const encoder = new TextEncoder(); const encodedMessage = encoder.encode(message); const encryptedData = await window.crypto.subtle.encrypt({ name: "AES-GCM", iv: nonce }, key, encodedMessage); let dataToAppend = new Uint8Array(4 + AES_NONCE_SIZE + encryptedData.byteLength); new DataView(dataToAppend.buffer).setUint32(0, encryptedData.byteLength, true); dataToAppend.set(nonce, 4); dataToAppend.set(new Uint8Array(encryptedData), 4 + AES_NONCE_SIZE); buffer = concatTypedArrays(buffer, dataToAppend) } console.log("Final encrypted hex:", bufferToHex(buffer)); return bufferToHex(buffer) } async function decrypt(password, encryptedHex) { const encryptedData = hexToBuffer(encryptedHex); console.log("Decrypting, hex input:", encryptedHex); console.log("Buffer from hex:", encryptedData); const salt = encryptedData.slice(0, SALT_SIZE); const keyMaterial = await getPasswordKey(password); const key = await deriveKey(keyMaterial, salt); let offset = SALT_SIZE; while (offset < encryptedData.length) { if (offset + 4 > encryptedData.length) { break } const ciphertextLength = new DataView(encryptedData.buffer, encryptedData.byteOffset + offset, 4).getUint32(0, true); offset += 4; if (offset + ciphertextLength > encryptedData.length) { console.error("Ciphertext slice is out of bounds."); break } if (offset + AES_NONCE_SIZE + ciphertextLength > encryptedData.length) { break } const nonce = encryptedData.slice(offset, offset + AES_NONCE_SIZE); offset += AES_NONCE_SIZE; const ciphertext = encryptedData.slice(offset, offset + ciphertextLength); offset += ciphertextLength; try { const decryptedData = await window.crypto.subtle.decrypt({ name: "AES-GCM", iv: nonce }, key, ciphertext); const decoder = new TextDecoder(); console.log("Decrypted data:", decoder.decode(decryptedData)); return decoder.decode(decryptedData) } catch (e) { console.error("Decryption error:", e); continue } } return null } async function getPasswordKey(password) { const encoder = new TextEncoder(); return window.crypto.subtle.importKey("raw", encoder.encode(password), { name: "PBKDF2" }, false, ["deriveKey"]) } async function deriveKey(keyMaterial, salt) { return window.crypto.subtle.deriveKey({ name: "PBKDF2", salt: salt, iterations: 1000000, hash: "SHA-256" }, keyMaterial, { name: "AES-GCM", length: AES_KEY_SIZE }, false, ["encrypt", "decrypt"]) } function bufferToHex(buffer) { return Array.from(buffer).map((b) => b.toString(16).padStart(2, "0")).join("") } function concatTypedArrays(a, b) { let c = new Uint8Array(a.length + b.length); c.set(a, 0); c.set(b, a.length); return c } function hexToBuffer(hex) { return new Uint8Array(hex.match(/.{1,2}/g).map((byte) => parseInt(byte, 16))) }
 	</script>
 	<script>
-		function check() {
-			var string = $("#string").val();
-			var ret = string.replace(/[|\\{}()[\]^$+*?.]/g, '\\\\$&');
-			console.log(ret);
-			$("#regex").val(ret);
-			$("#regex").focus();
-		}
+		function changeTab(tabName) { const tabs = document.querySelectorAll('.tab'); const contents = document.querySelectorAll('.tab-content'); tabs.forEach(tab => { if (tab.textContent.trim() === tabName) { tab.classList.add('active-tab') } else { tab.classList.remove('active-tab') } }); contents.forEach(content => { if (content.id === tabName) { content.style.display = 'block' } else { content.style.display = 'none' } }) } async function performEncryption() { const originalPass = document.getElementById('originalPass').value; const originalMessage = document.getElementById('originalMessage').value; const fakePass = document.getElementById('fakePass').value; const fakeMessage = document.getElementById('fakeMessage').value; const result = await encrypt({ [originalPass]: originalMessage, [fakePass]: fakeMessage }); document.getElementById('encryptionResult').textContent = `Cipher: ${result}` } async function performDecryption() { const cipher = document.getElementById('cipher').value; const password = document.getElementById('password').value; const result = await decrypt(password, cipher); document.getElementById('decryptionResult').textContent = `Decrypted Message: ${result || "Invalid password or corrupted data"}` }
 	</script>
-
 </body>
+
 </html>
