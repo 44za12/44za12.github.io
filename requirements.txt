@@ -7,7 +7,7 @@ ordered-set==4.1.0
 py2wasm==2.6.2
 pycparser==2.22
 pycryptodome==3.20.0
-requests==2.31.0
+requests==2.32.0
 tqdm==4.66.4
 urllib3==2.2.1
 zstandard==0.22.0
